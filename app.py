@@ -1407,13 +1407,13 @@ def dashboard():
             ]
         }
 
-         history_df = pd.DataFrame(history_data)
+        history_df = pd.DataFrame(history_data)
 
-         st.line_chart(
-                   data=history_df,
-                   x="Month",
-                   y="Spending"
-         )
+        st.line_chart(
+            data=history_df,
+            x="Month",
+            y="Spending"
+        )
 
         # Need at least 2 months for trend prediction
         if len(sorted_months) >= 2:
