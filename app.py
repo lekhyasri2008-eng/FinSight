@@ -1330,10 +1330,12 @@ def dashboard():
             ]
         }
 
+        chart_df = pd.DataFrame(chart_data)
+
         st.bar_chart(
-            chart_data,
-            x="Category",
-            y="Amount"
+         data=chart_df,
+         x="Category",
+         y="Amount"
         )
 
         # Spending observations
@@ -1405,11 +1407,13 @@ def dashboard():
             ]
         }
 
-        st.line_chart(
-            history_data,
-            x="Month",
-            y="Spending"
-        )
+      history_df = pd.DataFrame(history_data)
+
+      st.line_chart(
+       data=history_df,
+        x="Month",
+        y="Spending"
+      )
 
         # Need at least 2 months for trend prediction
         if len(sorted_months) >= 2:
