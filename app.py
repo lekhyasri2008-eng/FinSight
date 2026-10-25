@@ -6,7 +6,7 @@ import joblib
 from datetime import datetime
 
 # Load trained ML model
-savings_model = joblib.load("savings_model.pkl")
+savings_model = None
 
 st.set_page_config(page_title="FinSight | Finance Dashboard", page_icon="💰", layout="wide")
 
