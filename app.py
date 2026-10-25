@@ -1400,20 +1400,20 @@ def dashboard():
         st.markdown("### 📊 Historical Monthly Spending")
 
         history_data = {
-            "Month": sorted_months,
+        "Month": sorted_months,
             "Spending": [
                 monthly_expenses[month]
                 for month in sorted_months
             ]
         }
 
-      history_df = pd.DataFrame(history_data)
+                history_df = pd.DataFrame(history_data)
 
-      st.line_chart(
-       data=history_df,
-        x="Month",
-        y="Spending"
-      )
+                st.line_chart(
+                   data=history_df,
+                   x="Month",
+                   y="Spending"
+                )
 
         # Need at least 2 months for trend prediction
         if len(sorted_months) >= 2:
