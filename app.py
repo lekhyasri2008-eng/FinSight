@@ -3,6 +3,7 @@ import sqlite3
 import hashlib
 import secrets
 import joblib
+import pandas as pd
 from datetime import datetime
 
 # Load trained ML model
